@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+
+
+/* body {
+    line-height: 1.6;
+    background: linear-gradient( #ae6bff, #3498db);
+    background: url('') no-repeat center center/cover; 
+} */
+body {
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #3498db, #ffffff) no-repeat center center/cover;
+
+}
+
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 40px 0 60px 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+#search-input {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 20px;
+    border: 5px solid teal;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 20px;
+    color: turquoise;
+}
+
+#search-button {
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    color: rgb(246, 250, 250);
+    background-color: #138065;
+    border-radius: 5px;
+    border: 20px #138065;
+    font-size: 30px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-results {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-result {
+    margin-bottom: 60px;
+    width: 30%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.search-result img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.search-result {
+    transition: transform 0.3s ease;
+}
+
+.search-result:hover {
+    transform: scale(1.2); 
+}
+
+
+.search-result a{
+    font-size:20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
+
+}
+
+#show-more{
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    color: rgb(246, 250, 250);
+    background-color: #138065;
+    border-radius: 5px;
+    border: 20px #138065;
+    font-size: 30px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin: 30px auto;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .search-results{
+        padding:20px;
+    }
+    .search-result{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-result{
+        width: 100%;
+    }
+}
+
+
+.heading {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    animation: glowing 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowing {
+    from {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+}
+
+nav {
+    background-color: #3498db;
+    padding: 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+}
+
+li a {
+    color: black;
+    font-size:20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.grass-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px ; /* Adjust the height as needed */
+    background: url('https://previews.123rf.com/images/barbaliss/barbaliss1708/barbaliss170800065/84282288-green-grass-border-illustration.jpg') repeat-x bottom;
+    background-size: contain;
+    z-index: -1;
+  }
+  
+
+
+
+
+
+
+  
+
+.leaves {
+    position: relative;
+    top: -50px;
+    right: 100px;
+    width: 100%;
+    text-align: right;
+}
+
+/* leaves definition */
+.leaves i {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    background: linear-gradient(to bottom right, #309900, #005600);
+    transform: skew(20deg);
+    border-radius: 5% 40% 70%;
+    box-shadow: inset 0px 0px 1px #222;
+    border: 1px solid #333;
+    z-index: 1;
+    animation: falling 5s 0s infinite;
+}
+
+/* 2n leaves animation definition */
+.leaves i:nth-of-type(2n) {
+    animation: falling2 5s 0s infinite;
+}
+
+/* 3n leaves animation definition */
+.leaves i:nth-of-type(3n) {
+    animation: falling3 5s 0s infinite;
+}
+
+
+@keyframes falling {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate3d(-350px,  900px, 0) rotate(90deg);
+    }
+}
+
+@keyframes falling3 {
+    0% {
+       transform:
+           translate3d(0,0,0)
+           rotate(-20deg);
+   }
+
+   100% {
+       transform:
+           translate3d(-230px, 840px, 0)
+           rotate(-70deg);
+       opacity: 0;
+   }
+}
+
+@keyframes falling2 {
+    0% {
+       transform:
+           translate3d(0,0,0)
+           rotate(90deg);
+   }
+
+   100% {
+       transform:
+           translate3d(-400px,880px,0)
+           rotate(0deg);
+       opacity: 0;
+   }
+}
+
+/* branch definition */
+.leaves i:before {
+    position: absolute;
+    content: '';
+    top: 117px;
+    right: 9px;
+    height: 27px;
+    width: 32px;
+    transform: rotate(49deg);
+    border-radius: 0% 15% 15% 0%;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    border-left: 0px solid #222;
+    border-right: 1px solid #222;
+    background: linear-gradient(to right, rgba(0,100,0,1), #005600);
+    z-index: 1;
+}
+
+.leaves i:after {
+    content: '';
+    height: 125px;
+    width: 10px;
+    background: linear-gradient(to right, rgba(0,0,0,.15), rgba(0,0,0,0));
+    display: block;
+    transform: rotate(125deg);
+    position: absolute;
+    left: 85px;
+    border-radius:50%;
+}
+
+/* delay definition */
+.leaves i:nth-of-type(n)   { animation-delay: 1.9s;}
+.leaves i:nth-of-type(2n)  { animation-delay: 3.9s;}
+.leaves i:nth-of-type(3n)  { animation-delay: 2.3s;}
+.leaves i:nth-of-type(4n)  { animation-delay: 4.4s;}
+.leaves i:nth-of-type(5n)  { animation-delay: 5s;  }
+.leaves i:nth-of-type(6n)  { animation-delay: 3.5s;}
+.leaves i:nth-of-type(7n)  { animation-delay: 2.8s;}
+.leaves i:nth-of-type(8n)  { animation-delay: 1.5s;}
+.leaves i:nth-of-type(9n)  { animation-delay: 3.3s;}
+.leaves i:nth-of-type(10n) { animation-delay: 2.5s;}
+.leaves i:nth-of-type(11n) { animation-delay: 1.2s;}
+.leaves i:nth-of-type(12n) { animation-delay: 4.1s;}
+.leaves i:nth-of-type(13n) { animation-delay: 1s;  }
+.leaves i:nth-of-type(14n) { animation-delay: 4.7s;}
+.leaves i:nth-of-type(15n) { animation-delay: 3s;  }
+
+.leaves i:nth-of-type(n)    { background: linear-gradient(to bottom right, #309900, #005600); }
+.leaves i:nth-of-type(2n+2)  { background: linear-gradient(to bottom right, #5e9900, #2b5600); }
+.leaves i:nth-of-type(4n+1)  { background: linear-gradient(to bottom right, #990, #564500); }
+.leaves i:nth-of-type(n)    { opacity: .7;}
+.leaves i:nth-of-type(3n+1)  { opacity: .5;}
+.leaves i:nth-of-type(3n+2)  { opacity: .3;}
+.leaves i:nth-of-type(n)    {transform: rotate(180deg);}
+.leaves i:nth-of-type(n) { animation-timing-function:ease-in-out;}
+
+
+.leaves i:nth-of-type(n)    { height:23px; width:30px; }
+.leaves i:nth-of-type(n):before { width:7px; height:5px; top:17px; right:1px; }
+.leaves i:nth-of-type(n):after { width:2px; height:17px; left: 12px; top:0px; }
+
+.leaves i:nth-of-type(2n+1)    { height:11px; width:16px; }
+.leaves i:nth-of-type(2n+1):before { width:4px; height:3px; top:7px; right:0px; }
+.leaves i:nth-of-type(2n+1):after { width:2px; height:6px; left: 5px; top:1px; }
+
+.leaves i:nth-of-type(3n+2)  { height:17px; width:23px; }
+.leaves i:nth-of-type(3n+2):before  { height:4px; width:4px; top:12px; right:1px; }
+.leaves i:nth-of-type(3n+2):after  { height:10px; width:2px; top:1px; left:8px; }
+
+
+#search-button-2 {
+    background-color: #33a837; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 22px; 
+    cursor: pointer; 
+    margin-left: 20px;
+  }
+  
+  #search-button-2:hover {
+    background-color: #08480b; 
+  }
+  #search-button:hover {
+    background-color: #2a0345; 
+  }
+  
